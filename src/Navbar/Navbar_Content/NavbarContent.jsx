@@ -17,6 +17,7 @@ const NavbarContent = () => {
     ];
     const animateContent = {
         initial: { opacity: 0, rotateX: 40, translateX: -50, translateY: 80 },
+        initial2: { opacity: 0 },
         animate: (index) => ({
             opacity: 1,
             rotateX: 0,
@@ -53,7 +54,7 @@ const NavbarContent = () => {
                         key={index}
                         custom={index}
                         variants={animateContent}
-                        animate="animate" initial="initial" exit="exit"
+                        animate="animate" initial="initial2" exit="exit"
                     >
                         {links.link}
                     </motion.a>
