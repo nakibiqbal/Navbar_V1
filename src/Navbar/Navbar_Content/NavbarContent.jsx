@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import "./NavbarContent.css"
 import { motion } from "framer-motion";
 
-const NavbarContent = () => {
+const NavbarContent = ({ isLargeScreen }) => {
     const navPages = [
         { page: "home" },
         { page: "about" },
@@ -16,7 +17,7 @@ const NavbarContent = () => {
         { link: "LINKEDIN" }
     ];
     const animateContent = {
-        initial: { opacity: 0, rotateX: 40, translateX: -50, translateY: 80 },
+        initial: { opacity: 0, rotateX: isLargeScreen ? 40 : 80, translateX: isLargeScreen ? -50 : -40, translateY: 80 },
         initial2: { opacity: 0 },
         animate: (index) => ({
             opacity: 1,

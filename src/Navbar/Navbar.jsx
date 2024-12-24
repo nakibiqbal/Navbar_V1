@@ -40,7 +40,7 @@ const Navbar = () => {
                 <NavbarButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
                 <AnimatePresence>
-                    {isOpen && <NavbarContent />}
+                    {isOpen && <NavbarContent isLargeScreen={isLargeScreen} />}
                 </AnimatePresence>
 
             </motion.div>
