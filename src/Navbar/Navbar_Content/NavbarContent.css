@@ -1,0 +1,53 @@
+.navbarContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0px 20px;
+}
+.navPages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 15px;
+  perspective: 120px;
+  perspective-origin: bottom;
+}
+.navPages a {
+  font-family: sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2b514b;
+}
+.navLinks {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+.navLinks a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+@media (max-width: 500px) {
+  .navPages a {
+    font-size: 22px;
+  }
+  .navLinks {
+    width: 100%;
+  }
+  .navLinks a {
+    font-size: 14px;
+  }
+}
