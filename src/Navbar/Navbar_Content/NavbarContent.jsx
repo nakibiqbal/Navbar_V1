@@ -11,19 +11,20 @@ const NavbarContent = ({ isLargeScreen }) => {
         { page: "contact" },
     ];
     const navLinks = [
-        { link: "FACEBOOK" },
-        { link: "INSTAGRAM" },
-        { link: "TWITTER" },
-        { link: "LINKEDIN" }
+        { link: "Facebook" },
+        { link: "Instagram" },
+        { link: "Twitter" },
+        { link: "LinkedIn" }
     ];
     const animateContent = {
-        initial: { opacity: 0, rotateX: isLargeScreen ? 40 : 80, translateX: isLargeScreen ? -50 : -40, translateY: 80 },
+        initial: {
+            opacity: 0,
+            rotateX: isLargeScreen ? 140 : 100, translateX: isLargeScreen ? -60 : -40, translateY: isLargeScreen ? 120 : 80,
+        },
         initial2: { opacity: 0 },
         animate: (index) => ({
             opacity: 1,
-            rotateX: 0,
-            translateX: 0,
-            translateY: 0,
+            rotateX: 0, translateX: 0, translateY: 0,
             transition: {
                 delay: 0.5 + (index * 0.1),
                 duration: 0.65,
@@ -37,15 +38,16 @@ const NavbarContent = ({ isLargeScreen }) => {
         <div className="navbarContent">
             <div className="navPages">
                 {navPages.map((pages, index) => {
-                    return <motion.a
-                        key={index}
-                        href="#"
-                        custom={index}
-                        animate="animate" initial="initial" exit="exit"
-                        variants={animateContent}
-                    >
-                        {pages.page}
-                    </motion.a>
+                    return <div key={index} className="perspective">
+                        <motion.div custom={index}
+                            animate="animate" initial="initial" exit="exit"
+                            variants={animateContent}
+                            className="persAnimate">
+                            <a href="#">
+                                {pages.page}
+                            </a>
+                        </motion.div>
+                    </div>
                 })}
             </div>
             <div className="navLinks">
@@ -66,3 +68,4 @@ const NavbarContent = ({ isLargeScreen }) => {
 }
 
 export default NavbarContent
+
