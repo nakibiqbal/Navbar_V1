@@ -13,12 +13,11 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  gap: 15px;
+  gap: 20px;
   position: relative;
 }
 .navPages a {
-  font-family: Inter, sans-serif;
-  font-size: 52px;
+  font-size: 48px;
   text-transform: capitalize;
   text-decoration: none;
   color: black;

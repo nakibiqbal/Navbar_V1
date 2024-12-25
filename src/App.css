@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/eight-bit-dragon");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,4 +7,6 @@
 }
 body {
   background-color: #eaeaea;
+  font-family: "Eight Bit Dragon";
+  font-weight: 100;
 }
